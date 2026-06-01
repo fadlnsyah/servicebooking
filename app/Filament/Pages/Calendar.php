@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\User;
 use Filament\Pages\Page;
 use Filament\Support\Icons\Heroicon;
+use App\Filament\Resources\Bookings\BookingResource;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 
@@ -53,6 +54,20 @@ class Calendar extends Page
                         'items' => $group->values(),
                     ];
                 }),
+            'calendarEvents' => $bookings->map(fn (Booking $booking): array => [
+                'id' => (string) $booking->id,
+                'title' => $booking->service->name,
+                'start' => $booking->booking_date->toDateString().'T'.substr($booking->start_time, 0, 5),
+                'end' => $booking->booking_date->toDateString().'T'.substr($booking->end_time, 0, 5),
+                'url' => BookingResource::getUrl('view', ['record' => $booking]),
+                'extendedProps' => [
+                    'code' => $booking->booking_code,
+                    'customer' => $booking->user?->name ?? 'Unknown',
+                    'provider' => $booking->provider?->name ?? 'Provider pending',
+                    'status' => $booking->status,
+                    'time' => substr($booking->start_time, 0, 5).' - '.substr($booking->end_time, 0, 5),
+                ],
+            ])->values(),
         ];
     }
 }
