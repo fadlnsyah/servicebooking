@@ -21,13 +21,6 @@
                 <h1 class="mt-3 text-4xl font-bold text-slate-950">Book {{ $service->name }}</h1>
             </div>
             <x-ui.card class="p-8">
-                <div class="mb-8 grid gap-4 sm:grid-cols-5">
-                    @foreach(['Select Service', 'Choose Date & Time', 'Customer Information', 'Review Booking', 'Confirmation'] as $index => $step)
-                        <div class="{{ $index === 1 ? 'bg-teal-700 text-white' : 'bg-slate-100 text-slate-500' }} rounded-2xl px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em]">
-                            {{ $step }}
-                        </div>
-                    @endforeach
-                </div>
                 <form method="POST" action="{{ route('bookings.store') }}" class="space-y-5">
                     @csrf
                     <input type="hidden" name="service_id" value="{{ $service->id }}">
