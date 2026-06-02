@@ -61,7 +61,7 @@ class BookingWorkflowService
             return $booking;
         });
 
-        Mail::to($booking->customer_email)->send(new BookingSubmittedMail($booking));
+        Mail::to($booking->customer_email)->queue(new BookingSubmittedMail($booking->load(['service', 'provider'])));
 
         return $booking;
     }

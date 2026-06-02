@@ -100,6 +100,18 @@ php artisan serve
 npm run dev
 ```
 
+Run the queue worker when testing email delivery:
+
+```bash
+php artisan queue:work
+```
+
+Queue upcoming booking reminders manually with:
+
+```bash
+php artisan bookings:send-reminders
+```
+
 ## Environment Variables
 
 Set these in `.env`:

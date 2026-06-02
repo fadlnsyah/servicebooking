@@ -50,6 +50,7 @@ class Booking extends Model
         'status',
         'payment_method',
         'payment_status',
+        'reminder_sent_at',
     ];
 
     protected function casts(): array
@@ -60,6 +61,7 @@ class Booking extends Model
             'admin_fee' => 'integer',
             'total_price' => 'integer',
             'duration_minutes' => 'integer',
+            'reminder_sent_at' => 'datetime',
         ];
     }
 

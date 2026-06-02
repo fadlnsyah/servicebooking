@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class BookingSubmittedMail extends Mailable implements ShouldQueue
+class BookingReminderMail extends Mailable implements ShouldQueue
 {
     use Queueable;
     use SerializesModels;
@@ -24,14 +24,14 @@ class BookingSubmittedMail extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Booking Submitted: '.$this->booking->booking_code,
+            subject: 'Booking Reminder: '.$this->booking->booking_code,
         );
     }
 
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.bookings.submitted',
+            markdown: 'emails.bookings.reminder',
             with: ['booking' => $this->booking],
         );
     }
