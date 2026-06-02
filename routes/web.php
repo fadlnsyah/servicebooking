@@ -15,17 +15,22 @@ Route::get('/services', [ServiceController::class, 'index'])->name('services.ind
 Route::get('/services/{service:slug}', [ServiceController::class, 'show'])->name('services.show');
 
 Route::middleware(['auth', 'verified'])->group(function (): void {
+    Route::get('/dashboard', DashboardController::class)->name('dashboard');
+});
+
+Route::middleware(['auth', 'verified', 'role:customer'])->group(function (): void {
     Route::get('/services/{service:slug}/book', [ServiceController::class, 'book'])->name('services.book');
     Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
     Route::get('/bookings/{booking}/success', [BookingController::class, 'success'])->name('bookings.success');
 
-    Route::get('/dashboard', DashboardController::class)->name('dashboard');
     Route::get('/my-bookings', [MyBookingController::class, 'index'])->name('bookings.index');
     Route::get('/my-bookings/{booking}', [MyBookingController::class, 'show'])->name('bookings.show');
     Route::patch('/my-bookings/{booking}/cancel', [MyBookingController::class, 'cancel'])->name('bookings.cancel');
     Route::patch('/my-bookings/{booking}/reschedule', [MyBookingController::class, 'reschedule'])->name('bookings.reschedule');
     Route::post('/my-bookings/{booking}/review', [MyBookingController::class, 'review'])->name('bookings.review');
+});
 
+Route::middleware(['auth', 'verified'])->group(function (): void {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

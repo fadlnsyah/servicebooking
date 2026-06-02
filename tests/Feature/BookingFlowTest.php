@@ -92,3 +92,15 @@ test('provider can access provider scoped reports page', function () {
         ->get('/admin/reports')
         ->assertOk();
 });
+
+test('provider is redirected away from customer dashboard and login', function () {
+    $provider = makeUserWithRole('provider');
+
+    $this->actingAs($provider)
+        ->get('/dashboard')
+        ->assertRedirect('/admin');
+
+    $this->actingAs($provider)
+        ->get('/login')
+        ->assertRedirect('/admin');
+});

@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Booking;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\View;
 
 class DashboardController extends Controller
 {
-    public function __invoke(): View
+    public function __invoke(): View|RedirectResponse
     {
         $user = request()->user();
+
+        if ($user->hasAnyRole(['admin', 'provider'])) {
+            return redirect('/admin');
+        }
 
         return view('dashboard', [
             'upcomingBookings' => $user->bookings()
