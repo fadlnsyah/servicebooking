@@ -30,6 +30,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('ServiceBooking Operations')
             ->colors([
                 'primary' => Color::Teal,
             ])

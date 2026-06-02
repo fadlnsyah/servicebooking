@@ -20,11 +20,11 @@ class ServicesTable
             ->columns([
                 ImageColumn::make('image')->circular(),
                 TextColumn::make('name')->searchable()->sortable(),
-                TextColumn::make('category.name')->label('Category'),
-                TextColumn::make('provider.name')->label('Provider'),
+                TextColumn::make('category.name')->label('Category')->toggleable(),
+                TextColumn::make('provider.name')->label('Provider')->toggleable(isToggledHiddenByDefault: auth()->user()?->isProvider() ?? false),
                 TextColumn::make('price')->money('IDR')->sortable(),
                 TextColumn::make('duration_minutes')->suffix(' min'),
-                TextColumn::make('rating')->sortable(),
+                TextColumn::make('rating')->sortable()->toggleable(),
                 IconColumn::make('is_active')->boolean()->label('Active'),
             ])
             ->filters([

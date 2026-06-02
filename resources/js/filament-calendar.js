@@ -2,6 +2,7 @@ import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import './filament-calendar.css';
 
 const calendarEl = document.getElementById('servicebooking-calendar');
 const detailEl = document.getElementById('servicebooking-calendar-detail');
@@ -47,9 +48,9 @@ const renderDetails = (event) => {
         </div>
         <div>
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">Status</p>
-            <p class="mt-1 inline-flex rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700">${escapeHtml(headline(props.status))}</p>
+            <p class="mt-1 inline-flex rounded-lg bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700">${escapeHtml(headline(props.status))}</p>
         </div>
-        <a href="${escapeHtml(event.url)}" class="inline-flex w-full justify-center rounded-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white">
+        <a href="${escapeHtml(event.url)}" class="inline-flex w-full justify-center rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white">
             Open booking
         </a>
     `;

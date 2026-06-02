@@ -22,14 +22,14 @@ class BookingsTable
     {
         return $table
             ->columns([
-                TextColumn::make('booking_code')->searchable()->sortable(),
-                TextColumn::make('user.name')->label('Customer')->searchable(),
-                TextColumn::make('service.name')->label('Service'),
-                TextColumn::make('provider.name')->label('Provider'),
+                TextColumn::make('booking_code')->label('Code')->searchable()->sortable()->copyable(),
+                TextColumn::make('user.name')->label('Customer')->searchable()->toggleable(),
+                TextColumn::make('service.name')->label('Service')->searchable(),
+                TextColumn::make('provider.name')->label('Provider')->toggleable(isToggledHiddenByDefault: auth()->user()?->isProvider() ?? false),
                 TextColumn::make('booking_date')->date('d M Y')->sortable(),
-                TextColumn::make('start_time'),
+                TextColumn::make('start_time')->label('Time'),
                 TextColumn::make('status')->badge(),
-                TextColumn::make('payment_status')->badge(),
+                TextColumn::make('payment_status')->label('Payment')->badge(),
                 TextColumn::make('total_price')->money('IDR')->sortable(),
             ])
             ->filters([

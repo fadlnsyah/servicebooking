@@ -32,6 +32,11 @@ class BookingResource extends Resource
 
     protected static ?string $recordTitleAttribute = 'booking_code';
 
+    public static function getNavigationLabel(): string
+    {
+        return Auth::user()?->isProvider() ? 'My Assignments' : 'Bookings';
+    }
+
     public static function form(Schema $schema): Schema
     {
         return BookingForm::configure($schema);
