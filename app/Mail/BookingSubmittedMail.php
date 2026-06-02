@@ -15,8 +15,6 @@ class BookingSubmittedMail extends Mailable implements ShouldQueue
     use Queueable;
     use SerializesModels;
 
-    public bool $afterCommit = true;
-
     public function __construct(public Booking $booking)
     {
     }
