@@ -2,7 +2,6 @@ import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import './filament-calendar.css';
 
 const calendarEl = document.getElementById('servicebooking-calendar');
 const detailEl = document.getElementById('servicebooking-calendar-detail');
@@ -27,30 +26,30 @@ const renderDetails = (event) => {
 
     detailEl.innerHTML = `
         <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">Code</p>
-            <p class="mt-1 font-bold text-gray-950">${escapeHtml(props.code)}</p>
+            <p class="sb-detail-label">Code</p>
+            <p class="sb-detail-value">${escapeHtml(props.code)}</p>
         </div>
         <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">Service</p>
-            <p class="mt-1 font-bold text-gray-950">${escapeHtml(event.title)}</p>
+            <p class="sb-detail-label">Service</p>
+            <p class="sb-detail-value">${escapeHtml(event.title)}</p>
         </div>
         <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">Schedule</p>
-            <p class="mt-1 text-gray-700">${escapeHtml(event.start?.toLocaleDateString())} · ${escapeHtml(props.time)}</p>
+            <p class="sb-detail-label">Schedule</p>
+            <p class="sb-detail-value">${escapeHtml(event.start?.toLocaleDateString())} · ${escapeHtml(props.time)}</p>
         </div>
         <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">Customer</p>
-            <p class="mt-1 text-gray-700">${escapeHtml(props.customer)}</p>
+            <p class="sb-detail-label">Customer</p>
+            <p class="sb-detail-value">${escapeHtml(props.customer)}</p>
         </div>
         <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">Provider</p>
-            <p class="mt-1 text-gray-700">${escapeHtml(props.provider)}</p>
+            <p class="sb-detail-label">Provider</p>
+            <p class="sb-detail-value">${escapeHtml(props.provider)}</p>
         </div>
         <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">Status</p>
-            <p class="mt-1 inline-flex rounded-lg bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700">${escapeHtml(headline(props.status))}</p>
+            <p class="sb-detail-label">Status</p>
+            <p class="sb-badge">${escapeHtml(headline(props.status))}</p>
         </div>
-        <a href="${escapeHtml(event.url)}" class="inline-flex w-full justify-center rounded-lg bg-primary-600 px-4 py-2 text-sm font-semibold text-white">
+        <a href="${escapeHtml(event.url)}" class="sb-button">
             Open booking
         </a>
     `;

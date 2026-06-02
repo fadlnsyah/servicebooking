@@ -9,6 +9,7 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
+use Filament\Support\Assets\Css;
 use Filament\Support\Colors\Color;
 use Filament\Widgets\AccountWidget;
 use Filament\Widgets\FilamentInfoWidget;
@@ -31,6 +32,9 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('ServiceBooking Operations')
+            ->assets([
+                Css::make('servicebooking-admin')->relativePublicPath('css/servicebooking-admin.css'),
+            ])
             ->colors([
                 'primary' => Color::Teal,
             ])

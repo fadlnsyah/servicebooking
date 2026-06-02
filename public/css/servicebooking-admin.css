@@ -1,0 +1,59 @@
+.sb-page{display:flex;flex-direction:column;gap:1.5rem}
+.sb-panel{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 1px 2px rgba(15,23,42,.05);padding:1.25rem}
+.sb-kicker{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0d9488;margin:0}
+.sb-title{font-size:1.25rem;line-height:1.75rem;font-weight:700;color:#111827;margin:.25rem 0 0}
+.sb-muted{font-size:.875rem;color:#6b7280;margin:.25rem 0 0}
+.sb-toolbar{display:flex;flex-direction:column;gap:1rem}
+.sb-toolbar-actions{display:flex;flex-direction:column;gap:.75rem}
+.sb-filter-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) auto auto;gap:.75rem;align-items:end}
+.sb-label{display:flex;flex-direction:column;gap:.25rem;font-size:.875rem;font-weight:600;color:#374151}
+.sb-input{width:100%;border:1px solid #d1d5db;border-radius:.5rem;background:#fff;color:#111827;font-size:.875rem;padding:.5rem .75rem;box-shadow:0 1px 2px rgba(15,23,42,.05)}
+.sb-button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:.5rem;background:#0d9488;color:#fff;font-size:.875rem;font-weight:700;padding:.55rem .9rem;text-decoration:none;box-shadow:0 1px 2px rgba(15,23,42,.08);cursor:pointer}
+.sb-button-secondary{background:#fff;color:#374151;border:1px solid #d1d5db}
+.sb-actions{display:flex;flex-wrap:wrap;gap:.5rem}
+.sb-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.sb-stat-grid-six{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sb-stat-card{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 1px 2px rgba(15,23,42,.05);padding:1.1rem}
+.sb-stat-label{font-size:.875rem;color:#6b7280;margin:0}
+.sb-stat-value{font-size:1.75rem;line-height:2.1rem;font-weight:800;color:#111827;margin:.35rem 0 0}
+.sb-stat-value-warning{color:#d97706}.sb-stat-value-info{color:#2563eb}
+.sb-calendar-layout{display:grid;grid-template-columns:minmax(0,1fr) 20rem;gap:1.5rem}
+.sb-calendar-card{min-width:0}
+.sb-calendar-card #servicebooking-calendar{min-height:620px}
+.sb-detail-card{align-self:start}
+.sb-detail-empty{background:#f9fafb;border-radius:.5rem;padding:1.25rem;text-align:center;color:#6b7280}
+.sb-detail-list{display:flex;flex-direction:column;gap:1rem}
+.sb-detail-label{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#9ca3af;margin:0}
+.sb-detail-value{font-size:.925rem;font-weight:700;color:#111827;margin:.25rem 0 0}
+.sb-badge{display:inline-flex;border-radius:.5rem;background:#f3f4f6;color:#374151;font-size:.75rem;font-weight:700;padding:.25rem .5rem}
+.sb-two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.sb-report-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.5rem}
+.sb-list{display:flex;flex-direction:column;margin-top:1rem}
+.sb-row{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid #f3f4f6;padding:.8rem 0;font-size:.875rem;color:#4b5563}
+.sb-row:first-child{border-top:0}
+.sb-row strong{color:#111827}
+.sb-table-wrap{overflow-x:auto;border:1px solid #e5e7eb;border-radius:.5rem;margin-top:1rem}
+.sb-table{width:100%;border-collapse:collapse;font-size:.875rem}
+.sb-table th{background:#f9fafb;color:#6b7280;font-weight:700;text-align:left;white-space:nowrap}
+.sb-table th,.sb-table td{border-bottom:1px solid #f3f4f6;padding:.75rem 1rem;vertical-align:middle}
+.sb-table tr:last-child td{border-bottom:0}
+.sb-table td{color:#4b5563}.sb-table td:first-child{color:#111827;font-weight:700}
+.sb-settings-form{max-width:64rem;display:flex;flex-direction:column;gap:1.5rem}
+.sb-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
+.sb-form-full{grid-column:1/-1}
+.sb-textarea{min-height:6.5rem;resize:vertical}
+.sb-form-footer{display:flex;justify-content:flex-end}
+.sb-avatar{display:inline-flex;width:2.25rem;height:2.25rem;align-items:center;justify-content:center;border-radius:.5rem;background:#ccfbf1;color:#0f766e;font-weight:800}
+.sb-customer-cell{display:flex;align-items:center;gap:.75rem;color:#111827;font-weight:700}
+.servicebooking-calendar-shell .fc{--fc-border-color:#e5e7eb;--fc-page-bg-color:transparent;--fc-neutral-bg-color:#f9fafb;--fc-today-bg-color:#f0fdfa;color:#111827;font-size:.875rem}
+.servicebooking-calendar-shell .fc .fc-toolbar{align-items:flex-start;gap:.75rem;margin-bottom:1rem}
+.servicebooking-calendar-shell .fc .fc-toolbar-title{font-size:1.125rem;font-weight:800}
+.servicebooking-calendar-shell .fc .fc-button{border:1px solid #d1d5db;border-radius:.5rem;background:#fff;color:#374151;font-size:.8125rem;font-weight:700;box-shadow:0 1px 2px rgba(0,0,0,.05);text-transform:capitalize}
+.servicebooking-calendar-shell .fc .fc-button-primary:not(:disabled).fc-button-active,.servicebooking-calendar-shell .fc .fc-button-primary:not(:disabled):active{border-color:#0d9488;background:#0d9488;color:#fff}
+.servicebooking-calendar-shell .fc .fc-col-header-cell{background:#f9fafb;padding:.5rem 0}
+.servicebooking-calendar-shell .fc .fc-col-header-cell-cushion,.servicebooking-calendar-shell .fc .fc-timegrid-slot-label-cushion,.servicebooking-calendar-shell .fc .fc-daygrid-day-number{color:#4b5563;font-size:.75rem;font-weight:800;text-decoration:none}
+.servicebooking-calendar-shell .fc .fc-event{border:0;border-radius:.5rem;padding:.125rem .25rem;background:#0d9488;color:#fff;font-weight:800;box-shadow:0 6px 18px rgba(15,118,110,.18)}
+.servicebooking-calendar-shell .fc .booking-status-pending{background:#d97706}.servicebooking-calendar-shell .fc .booking-status-approved{background:#2563eb}.servicebooking-calendar-shell .fc .booking-status-rescheduled{background:#7c3aed}
+@media (min-width:1024px){.sb-toolbar{flex-direction:row;align-items:flex-end;justify-content:space-between}.sb-toolbar-actions{align-items:flex-end}}
+@media (max-width:1100px){.sb-stat-grid,.sb-stat-grid-six{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-calendar-layout,.sb-report-grid{grid-template-columns:1fr}}
+@media (max-width:700px){.sb-filter-form,.sb-form-grid,.sb-two-col{grid-template-columns:1fr}.sb-stat-grid,.sb-stat-grid-six{grid-template-columns:1fr}.servicebooking-calendar-shell .fc .fc-toolbar{flex-direction:column}.sb-panel{padding:1rem}}
