@@ -2,11 +2,11 @@
     <section class="container-app py-16">
         <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
-                <div class="h-80 rounded-[2rem] bg-gradient-to-br from-teal-800 to-blue-700"></div>
+                <img src="{{ service_image_url($service->image) }}" alt="{{ $service->name }}" class="h-80 w-full rounded-[2rem] object-cover">
                 <div class="mt-6 grid gap-4 sm:grid-cols-3">
-                    <div class="h-24 rounded-3xl bg-slate-200"></div>
-                    <div class="h-24 rounded-3xl bg-slate-200"></div>
-                    <div class="h-24 rounded-3xl bg-slate-200"></div>
+                    <img src="{{ service_image_url($service->image) }}" alt="{{ $service->name }} preview" class="h-24 w-full rounded-3xl object-cover">
+                    <img src="{{ service_image_url($service->image) }}" alt="{{ $service->name }} detail" class="h-24 w-full rounded-3xl object-cover grayscale">
+                    <img src="{{ service_image_url($service->image) }}" alt="{{ $service->name }} workspace" class="h-24 w-full rounded-3xl object-cover saturate-150">
                 </div>
             </div>
             <div>

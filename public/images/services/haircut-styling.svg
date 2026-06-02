@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-label="Haircut and styling">
+  <rect width="900" height="540" fill="#134e4a"/>
+  <rect x="90" y="90" width="720" height="350" rx="34" fill="#f8fafc"/>
+  <circle cx="305" cy="250" r="86" fill="#99f6e4"/>
+  <path d="M225 365c26-74 183-74 210 0" fill="#0f766e"/>
+  <path d="M245 235c24-80 140-82 170-2 16 45-12 95-84 95-70 0-101-48-86-93z" fill="#0f172a"/>
+  <path d="M545 190l130 130M675 190L545 320" stroke="#0f766e" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="525" cy="170" r="26" fill="#14b8a6"/>
+  <circle cx="695" cy="340" r="26" fill="#14b8a6"/>
+</svg>

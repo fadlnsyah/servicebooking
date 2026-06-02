@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-label="Studio photography">
+  <rect width="900" height="540" fill="#312e81"/>
+  <rect x="185" y="160" width="530" height="300" rx="34" fill="#f8fafc"/>
+  <rect x="300" y="115" width="165" height="75" rx="24" fill="#c4b5fd"/>
+  <circle cx="450" cy="310" r="105" fill="#111827"/>
+  <circle cx="450" cy="310" r="62" fill="#818cf8"/>
+  <circle cx="475" cy="285" r="18" fill="#eef2ff"/>
+  <circle cx="655" cy="220" r="28" fill="#facc15"/>
+</svg>

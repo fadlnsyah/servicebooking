@@ -1,7 +1,7 @@
 @props(['service'])
 
 <x-ui.card class="overflow-hidden p-0">
-    <div class="h-48 bg-gradient-to-br from-teal-700 to-blue-600"></div>
+    <img src="{{ service_image_url($service->image) }}" alt="{{ $service->name }}" class="h-48 w-full object-cover">
     <div class="space-y-4 p-6">
         <div class="flex items-start justify-between gap-4">
             <div>

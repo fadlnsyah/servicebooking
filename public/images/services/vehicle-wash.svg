@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-label="Vehicle wash">
+  <rect width="900" height="540" fill="#0f172a"/>
+  <path d="M190 300l70-115h380l70 115v105H190z" fill="#f8fafc"/>
+  <path d="M300 215h290l38 65H262z" fill="#bfdbfe"/>
+  <circle cx="295" cy="405" r="48" fill="#38bdf8"/>
+  <circle cx="615" cy="405" r="48" fill="#38bdf8"/>
+  <path d="M170 150c44 0 44 45 88 45s44-45 88-45 44 45 88 45" stroke="#99f6e4" stroke-width="20" stroke-linecap="round" fill="none"/>
+  <circle cx="705" cy="145" r="40" fill="#fef3c7"/>
+</svg>

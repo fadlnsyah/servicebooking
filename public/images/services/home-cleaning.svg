@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-label="Home deep cleaning">
+  <rect width="900" height="540" fill="#0f766e"/>
+  <path d="M160 285l290-190 290 190v205H160z" fill="#f8fafc"/>
+  <path d="M450 95l330 220" stroke="#042f2e" stroke-width="34" stroke-linecap="round"/>
+  <path d="M450 95L120 315" stroke="#042f2e" stroke-width="34" stroke-linecap="round"/>
+  <rect x="370" y="330" width="120" height="160" rx="8" fill="#99f6e4"/>
+  <rect x="535" y="315" width="120" height="90" rx="12" fill="#ccfbf1"/>
+  <path d="M210 170l55 22-55 22-22 55-22-55-55-22 55-22 22-55z" fill="#fef3c7"/>
+</svg>

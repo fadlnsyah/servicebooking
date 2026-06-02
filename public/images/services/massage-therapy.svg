@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-label="Massage therapy">
+  <rect width="900" height="540" fill="#7f1d1d"/>
+  <rect x="140" y="315" width="620" height="95" rx="32" fill="#fef2f2"/>
+  <circle cx="285" cy="255" r="52" fill="#fecaca"/>
+  <path d="M340 270c130-55 250-48 360 8 28 14 18 57-14 57H330c-42 0-47-77 10-105z" fill="#fca5a5"/>
+  <path d="M530 130l28 50 50 28-50 28-28 50-28-50-50-28 50-28z" fill="#fef3c7"/>
+  <path d="M650 120l18 32 32 18-32 18-18 32-18-32-32-18 32-18z" fill="#fde68a"/>
+</svg>
