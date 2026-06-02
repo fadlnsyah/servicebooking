@@ -22,12 +22,10 @@
             </form>
         </div>
 
-        @if(auth()->user()?->isAdmin())
-            <div class="flex gap-3">
-                <a href="{{ route('admin.reports.export.pdf') }}" class="rounded-full bg-gray-900 px-5 py-3 text-sm font-semibold text-white">Export PDF</a>
-                <a href="{{ route('admin.reports.export.excel') }}" class="rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white">Export Excel</a>
-            </div>
-        @endif
+        <div class="flex gap-3">
+            <a href="{{ route('admin.reports.export.pdf', request()->only(['start_date', 'end_date'])) }}" class="rounded-full bg-gray-900 px-5 py-3 text-sm font-semibold text-white">Export PDF</a>
+            <a href="{{ route('admin.reports.export.excel', request()->only(['start_date', 'end_date'])) }}" class="rounded-full bg-teal-700 px-5 py-3 text-sm font-semibold text-white">Export Excel</a>
+        </div>
 
         <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm"><p class="text-sm text-gray-500">Total Bookings</p><p class="mt-3 text-3xl font-bold text-gray-950">{{ $totals['bookings'] }}</p></div>

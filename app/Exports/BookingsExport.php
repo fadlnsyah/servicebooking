@@ -3,15 +3,27 @@
 namespace App\Exports;
 
 use App\Models\Booking;
+use App\Models\User;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
 class BookingsExport implements FromCollection, WithHeadings
 {
+    public function __construct(
+        protected User $user,
+        protected ?string $startDate = null,
+        protected ?string $endDate = null,
+    ) {
+    }
+
     public function collection()
     {
         return Booking::query()
             ->with(['user', 'service', 'provider'])
+            ->visibleTo($this->user)
+            ->when($this->startDate, fn ($query) => $query->whereDate('booking_date', '>=', $this->startDate))
+            ->when($this->endDate, fn ($query) => $query->whereDate('booking_date', '<=', $this->endDate))
+            ->latest('booking_date')
             ->get()
             ->map(fn (Booking $booking) => [
                 'booking_code' => $booking->booking_code,

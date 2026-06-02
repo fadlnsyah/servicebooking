@@ -33,6 +33,9 @@ Route::middleware(['auth', 'verified'])->group(function (): void {
 
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function (): void {
     Route::patch('/settings', [AdminSettingsController::class, 'update'])->name('admin.settings.update');
+});
+
+Route::middleware(['auth', 'role_or_permission:admin|provider'])->prefix('admin')->group(function (): void {
     Route::get('/reports/export/pdf', [ReportExportController::class, 'pdf'])->name('admin.reports.export.pdf');
     Route::get('/reports/export/excel', [ReportExportController::class, 'excel'])->name('admin.reports.export.excel');
 });

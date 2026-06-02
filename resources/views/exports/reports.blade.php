@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <h1>ServiceBooking Report</h1>
+    <h1>ServiceBooking {{ $reportLabel ?? 'Report' }}</h1>
     <p>Total Revenue: {{ format_rupiah($totalRevenue) }}</p>
     <table>
         <thead>
@@ -19,6 +19,7 @@
                 <th>Booking Code</th>
                 <th>Customer</th>
                 <th>Service</th>
+                <th>Provider</th>
                 <th>Date</th>
                 <th>Status</th>
                 <th>Total</th>
@@ -30,6 +31,7 @@
                     <td>{{ $booking->booking_code }}</td>
                     <td>{{ $booking->customer_name }}</td>
                     <td>{{ $booking->service->name }}</td>
+                    <td>{{ $booking->provider?->name ?? '-' }}</td>
                     <td>{{ $booking->booking_date->format('d M Y') }}</td>
                     <td>{{ \Illuminate\Support\Str::headline($booking->status) }}</td>
                     <td>{{ format_rupiah($booking->total_price) }}</td>
