@@ -43,7 +43,6 @@
             <div class="container-app flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
                 <div>
                     <p class="text-lg font-bold text-slate-950">ServiceBooking</p>
-                    <p class="mt-2 text-sm text-slate-500">Portfolio-ready Laravel booking management system.</p>
                 </div>
                 <div class="flex flex-wrap gap-4 text-sm text-slate-500">
                     <span>Jakarta, Indonesia</span>
